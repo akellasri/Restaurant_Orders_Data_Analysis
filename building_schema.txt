@@ -1,0 +1,64 @@
+CREATE TABLE order_table
+    ("createdat" timestamp, "status" varchar(13), "restaurantname" varchar(30), "pickupDeadline" timestamp, "driverarrivedatrestaurantat" varchar(23), "pickedat" varchar(23))
+;
+    
+INSERT INTO order_table
+    ("createdat", "status", "restaurantname", "pickupDeadline", "driverarrivedatrestaurantat", "pickedat")
+VALUES
+    ('2021-01-23 02:47:48', 'complete', 'Red Pat - Craft Burgers & Beer', '2021-01-23 11:56:00', '2021-01-23 11:27:06.642', '2021-01-23 11:53:01.951'),
+    ('2021-01-23 10:14:44', 'complete', 'GoodFood Basel', '2021-01-23 10:38:00', '2021-01-23 10:45:42.651', '2021-01-23 11:02:28.023'),
+    ('2021-01-23 10:39:55', 'complete', 'Pizza Princess Zürich', '2021-01-23 11:21:00', '2021-01-23 10:51:28.457', '2021-01-23 10:52:12.325'),
+    ('2021-01-23 11:16:31', 'complete', 'Pizza Princess Genève', '2021-01-23 11:51:00', '2021-01-23 11:17:25.408', '2021-01-23 11:28:04.077'),
+    ('2021-01-23 11:20:53', 'error_payment', 'GoodFood Basel', '2021-01-23 11:40:00', NULL, NULL),
+    ('2021-01-23 11:24:54', 'complete', 'GoodFood Genève', '2021-01-23 11:55:00', '2021-01-23 11:53:11.395', '2021-01-23 11:56:38.594'),
+    ('2021-01-23 11:25:24', 'complete', 'GoodFood Basel', '2021-01-23 11:52:00', '2021-01-23 11:29:52.656', '2021-01-23 11:44:33.600'),
+    ('2021-01-23 11:29:22', 'complete', 'GoodFood Lausanne', '2021-01-23 11:55:00', '2021-01-23 11:29:58.576', '2021-01-23 11:58:42.472'),
+    ('2021-01-23 11:29:36', 'complete', 'GoodFood Genève', '2021-01-23 11:58:00', '2021-01-23 11:40:07.215', '2021-01-23 11:48:09.003'),
+    ('2021-01-23 11:38:31', 'complete', 'GoodFood Lausanne', '2021-01-23 12:12:00', '2021-01-23 11:48:55.840', '2021-01-23 11:54:09.159'),
+    ('2021-01-23 11:40:43', 'complete', 'GoodFood Lausanne', '2021-01-23 12:12:00', '2021-01-23 12:18:52.171', '2021-01-23 12:22:25.525'),
+    ('2021-01-23 11:45:43', 'complete', 'Maria', '2021-01-23 12:25:00', '2021-01-23 11:59:38.698', '2021-01-23 12:10:39.567'),
+    ('2021-01-23 12:07:28', 'complete', 'Red Pat - Craft Burgers & Beer', '2021-01-23 12:44:00', '2021-01-23 12:12:21.845', '2021-01-23 12:22:16.294'),
+    ('2021-01-23 12:17:30', 'complete', 'GoodFood Basel 2', '2021-01-23 12:39:00', '2021-01-23 12:30:31.915', '2021-01-23 12:35:21.236'),
+    ('2021-01-23 12:29:16', 'complete', 'GoodFood Lausanne', '2021-01-23 12:56:00', '2021-01-23 12:40:09.685', '2021-01-23 12:54:20.435')
+;
+
+CREATE TABLE TimestampToTime
+    ("createdAt" Date)
+;
+
+INSERT INTO TimestampToTime
+    ("createdAt")
+VALUES 
+    ('2021-01-23 02:47:48'),
+    ('2021-01-23 10:14:44'),
+    ('2021-01-23 10:39:55'),
+    ('2021-01-23 11:16:31'),
+    ('2021-01-23 11:20:53'),
+    ('2021-01-23 11:24:54'),
+    ('2021-01-23 11:25:24'),
+    ('2021-01-23 11:29:22'),
+    ('2021-01-23 11:29:36'),
+    ('2021-01-23 11:38:31'),
+    ('2021-01-23 11:40:43'),
+    ('2021-01-23 11:45:43'),
+    ('2021-01-23 12:07:28'),
+    ('2021-01-23 12:17:30'),
+    ('2021-01-23 12:29:16')
+;    
+    
+CREATE TABLE restaurantarea_table
+    ("restaurantname" varchar(30), "area" varchar(2))
+;
+    
+INSERT INTO restaurantarea_table
+    ("restaurantname", "area")
+VALUES
+    ('Red Pat - Craft Burgers & Beer', 'FR'),
+    ('GoodFood Basel', 'DE'),
+    ('Pizza Princess Zürich', 'DE'),
+    ('Pizza Princess Genève', 'FR'),
+    ('GoodFood Genève', 'FR'),
+    ('GoodFood Lausanne', 'FR'),
+    ('Maria', 'FR'),
+    ('GoodFood Basel 2', 'DE')
+;
